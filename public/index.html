@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="feed-back">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<body>
+
+  
+<body ng-controller="FeedBack">
     <div class="container">
         <div class="list-do">
             <h2>Feedbacks</h2>
             <form class="div">
-                <input type="text" id="input" class="input" placeholder="Nome">
-                <input type="text" id="input2"  class="input"placeholder="Feedback">
-                <button id="btn" class="btn">Add</button>
+                <input type="text" id="input" class="input" placeholder="Nome" ng-model="taskName">
+                <label for="input2">FeedBack:</label>
+                <input type="text" id="input2"  class="input  input-box" ng-model="feedBack">
+                <button id="btn" class="btn" ng-click='addTask()'>Add</button>
             </form>
-            <ul id="todo_lista">
-          
-                 
+            <ul id="todo_lista" >
+                <li class="task " ng-repeat="task in taskList"> 
+                    
+                    <p>
+                        <span>{{task.name}}</span>
+                       {{task.feedback}}
+                    </p>
+                    <button class="btn"  ng-click="deleteTask(task.id)">Deletar</button>
+                </li>
+                 <p class="no-tasks" ng-if="(taskList.length == 0)">Nenhum feedback cadastrado.</p>
             </ul>
         </div>
     </div>
 </body>
-<script src="./script.js"></script>
+<script src="./main.js"></script>
 </html>

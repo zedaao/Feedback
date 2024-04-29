@@ -3,14 +3,18 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
-    background-color: #181717;
+    background-color: #fff;
 }
 
 
 
 
 p{
-    text-transform: capitalize;
+  
+    background: #E4E3E9;
+    padding: 6px;
+    border-radius: 15px;
+    font-weight: 500;
 }
 
 
@@ -23,7 +27,7 @@ h2{
   
   li{
       list-style: none;
-      color: #B4B4B4;
+      color: #E4E3E9;
       padding: 20px 0px;
       font-size: 16px;
       display: grid;
@@ -32,10 +36,29 @@ h2{
       align-items: center;
       justify-content: start;
   }
-  
-  
 
+  input{
+    margin-bottom:20px ;
+  }
+  
+label{
+    
+    color: #151515;
+    font-weight: bold;
+}
 
+span{
+    background-color: transparent;
+   color: #c322a4;
+   font-weight: bold;
+}
+
+p{
+    display: grid;
+    gap: 5px;
+    padding: 10px;
+    color: #151515;
+}
 
 .container{
     margin: 0 auto;
@@ -66,12 +89,31 @@ h2{
 .task{
     color: #fff;
     transition: 0.2s;
-    opacity: 0.5;
+ 
     margin-top: 50px;
+}
+
+.btn{
+    width: 100%;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #151515;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+
 }
 
 
 
+.btn:hover{
+    background-color: #c322a4;
+    
+   }
+   
 .box:checked{
     background-color: #ACE1AF;
 }
@@ -97,23 +139,10 @@ h2{
     color: #fff;
 }
 
-#btn{
-    width: 100%;
-    margin-top: 20px;
-    color: #fff;
-    background-color: #151515;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
+.input-box{
+    padding: 50px;
 }
 
-#btn:hover{
- background-color: #c322a4;
- 
-}
 
 
 

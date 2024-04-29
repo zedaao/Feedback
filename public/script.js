@@ -10,7 +10,8 @@ function getAllTasks() {
     .then((response) => response.json())
     .then((data) => {
       if (!data || data.length === 0) {
-        lista.innerHTML = '<p class="no-tasks ">Nenhuma tarefa cadastrada.</p>';
+        lista.innerHTML =
+          '<p class="no-tasks ">Nenhum feedback cadastrado.</p>';
       } else {
         lista.innerHTML = "";
         data.forEach(criarElemento);
